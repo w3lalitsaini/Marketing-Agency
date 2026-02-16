@@ -21,14 +21,35 @@
     />
     <meta property="og:image" content="preview-image.jpg" />
     <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#7c3aed" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:site_name" content="WebNexus" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WebNexus Premium Templates" />
+    <meta
+      name="twitter:description"
+      content="High-converting HTML & React templates."
+    />
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
 
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WebNexus",
+        "url": "https://yourdomain.com",
+        "logo": "https://yourdomain.com/logo.png",
+        "sameAs": ["https://linkedin.com/in/yourprofile"]
+      }
+    </script>
   </head>
   <body>
     <header class="main-header">
@@ -41,11 +62,16 @@
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#contact" class="btn-nav">Hire Me</a></li>
         </ul>
+        <div class="menu-toggle" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
 
     <section id="home" class="hero">
-      <div class="container hero-wrapper">
+      <div class="container-hero hero-wrapper">
         <div class="hero-content">
           <span class="badge">🔥 New Templates Available</span>
           <h1>
@@ -62,10 +88,7 @@
           </div>
         </div>
         <div class="hero-img-box">
-          <img
-            src="https://via.placeholder.com/600x500"
-            alt="Dashboard Preview"
-          />
+          <img src="laptop.jpg" loading="lazy" alt="Dashboard Preview" />
         </div>
       </div>
     </section>
@@ -309,12 +332,6 @@
       </div>
     </section>
 
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-brand">
@@ -361,6 +378,11 @@
         </p>
       </div>
     </footer>
+
+    <div class="nav-overlay"></div>
+    <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+      💬
+    </a>
 
     <script src="script.js"></script>
   </body>
