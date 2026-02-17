@@ -77,6 +77,8 @@ body {
 .logo {
   font-size: 1.6rem;
   font-weight: 800;
+  text-decoration: none;
+  color: var(--dark);
 }
 .logo span {
   color: var(--primary);
@@ -188,7 +190,7 @@ body {
 }
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 .glass-card {
@@ -305,19 +307,49 @@ body {
   background: black;
 }
 
-/* Testimonial Styles */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+/* Testimonial Slider Styles */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+.testimonial-wrapper {
+  display: flex;
   gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.testimonial-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 .testimonial-card {
+  min-width: 100%; /* Default mobile: 1 slide per view */
   background: white;
   padding: 40px;
   border-radius: 20px;
   border: 1px solid #f1f5f9;
   position: relative;
+  scroll-snap-align: center;
+  transition: 0.3s;
 }
+@media (min-width: 768px) {
+  .testimonial-card {
+      min-width: calc(50% - 15px); /* Tablet: 2 slides */
+  }
+}
+@media (min-width: 1024px) {
+  .testimonial-card {
+      min-width: calc(33.333% - 20px); /* Desktop: 3 slides */
+  }
+}
+
 .client-info {
   display: flex;
   align-items: center;
@@ -328,6 +360,39 @@ body {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  object-fit: cover;
+}
+.slider-btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  color: var(--dark);
+}
+.slider-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.prev-btn {
+  position: absolute;
+  left: -20px;
+}
+.next-btn {
+  position: absolute;
+  right: -20px;
+}
+@media (max-width: 768px) {
+  .prev-btn { left: -10px; }
+  .next-btn { right: -10px; }
 }
 
 /* FAQ Accordion Styles */
@@ -372,7 +437,7 @@ body {
 /* Pricing */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 .price-card {
@@ -439,6 +504,27 @@ textarea {
 .footer-brand p {
   color: #94a3b8;
   margin: 20px 0;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+.social-links a {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+.social-links a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
 }
 .footer-links ul {
   list-style: none;

@@ -162,4 +162,44 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".section-title, .card-grid > *, .hero-content, .service-detail, .product-card").forEach((el) => {
     observer.observe(el);
   });
+
+  // ===== TESTIMONIAL SLIDER =====
+  const slider = document.querySelector(".testimonial-wrapper");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  if (slider && prevBtn && nextBtn) {
+      nextBtn.addEventListener("click", () => {
+          const cardWidth = slider.querySelector(".testimonial-card").offsetWidth;
+          slider.scrollBy({ left: cardWidth + 30, behavior: "smooth" });
+      });
+
+      prevBtn.addEventListener("click", () => {
+          const cardWidth = slider.querySelector(".testimonial-card").offsetWidth;
+          slider.scrollBy({ left: -(cardWidth + 30), behavior: "smooth" });
+      });
+      
+      // Optional: Auto Scroll
+      let autoScroll = setInterval(() => {
+          if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+              slider.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+              const cardWidth = slider.querySelector(".testimonial-card").offsetWidth;
+              slider.scrollBy({ left: cardWidth + 30, behavior: "smooth" });
+          }
+      }, 5000); // Scroll every 5 seconds
+
+      // Pause on hover
+      slider.addEventListener("mouseenter", () => clearInterval(autoScroll));
+      slider.addEventListener("mouseleave", () => {
+         autoScroll = setInterval(() => {
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                slider.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                const cardWidth = slider.querySelector(".testimonial-card").offsetWidth;
+                slider.scrollBy({ left: cardWidth + 30, behavior: "smooth" });
+            }
+        }, 5000);
+      });
+  }
 });

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store | Premium Web Templates & UI Kits - WebNexus</title>
-    <meta name="description" content="Download high-quality, conversion-optimized website templates, UI kits, and SaaS dashboards. Speed up your workflow with WebNexus assets.">
-    <meta property="og:title" content="WebNexus Store - Premium Digital Assets">
+    <title>Template Store | WebNexus Agency</title>
+    <meta name="description" content="Browse our premium collection of HTML templates, UI kits, and React dashboards. High-quality code for your next project.">
+    <meta property="og:title" content="WebNexus Template Store">
     <meta property="og:description" content="Premium HTML templates and UI kits for developers and agencies.">
     <meta property="og:image" content="https://yourdomain.com/store-og.jpg">
     <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     
@@ -42,7 +43,6 @@
         }
       ]
     }
-    }
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
@@ -59,40 +59,43 @@
             flex-wrap: wrap;
         }
         .filter-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: white;
+            border: 1px solid #e2e8f0;
             padding: 10px 25px;
             border-radius: 30px;
             color: var(--gray);
             cursor: pointer;
             transition: 0.3s;
             font-size: 0.9rem;
+            font-weight: 600;
         }
         .filter-btn.active, .filter-btn:hover {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
         }
+        /* Product Card Styles specific to Store Page structure */
         .product-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: white;
+            border: 1px solid #e2e8f0;
             border-radius: 20px;
             overflow: hidden;
             transition: 0.3s;
             position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
         .product-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .product-img {
             height: 200px;
-            background: #1e1e2e;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #4b5563;
+            color: var(--primary);
             font-size: 3rem;
         }
         .product-content {
@@ -105,11 +108,17 @@
             letter-spacing: 1px;
             margin-bottom: 10px;
             display: block;
+            font-weight: 700;
+        }
+        .product-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--dark);
         }
         .product-price {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
+            font-weight: 800;
+            color: var(--dark);
             margin: 15px 0;
         }
     </style>
@@ -118,7 +127,7 @@
 
     <header class="main-header">
         <nav class="container-header">
-            <div class="logo">Web<span>Nexus</span></div>
+            <a href="index.html" class="logo">Web<span>Nexus</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -252,7 +261,10 @@
                     Your strategic partner for digital excellence. We build websites that drive growth.
                 </p>
                 <div class="social-links">
-                    <a href="#">FB</a> <a href="#">TW</a> <a href="#">IG</a> <a href="#">LN</a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -286,6 +298,7 @@
         </div>
     </footer>
 
+    <div class="nav-overlay"></div>
     <script src="script.js"></script>
 </body>
 </html>

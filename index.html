@@ -35,6 +35,7 @@
     <link rel="icon" href="/favicon.png" type="image/png" />
     <meta property="og:image" content="preview.png" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
@@ -56,7 +57,7 @@
   <body>
     <header class="main-header">
       <nav class="container-header">
-        <div class="logo">Web<span>Nexus</span></div>
+        <a href="index.html" class="logo">Web<span>Nexus</span></a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -283,33 +284,75 @@
     <section id="testimonials" class="section bg-light">
       <div class="container">
         <h2 class="section-title text-center">Client Success Stories</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-              "WebNexus delivered our corporate site in just one week. The quality of code and attention to design detail is outstanding. Highly recommended!"
-            </p>
-            <div class="client-info">
-              <img src="https://i.pravatar.cc/50?u=1" alt="Client" />
-              <div>
-                <h4>Rajesh Kumar</h4>
-                <span>CEO, TechStart Inc.</span>
-              </div>
+        <div class="testimonial-container">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"WebNexus delivered our corporate site in just one week. The quality of code and attention to design detail is outstanding. Highly recommended!"</p>
+                    <div class="client-info">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="Client" />
+                        <div>
+                            <h4>Rajesh Kumar</h4>
+                            <span>CEO, TechStart Inc.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The portfolio template I bought allowed me to launch my freelance career. Documentation was clear and customization was a breeze."</p>
+                    <div class="client-info">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="Client" />
+                        <div>
+                            <h4>Sneha Sharma</h4>
+                            <span>UX Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The e-commerce kit is a game changer. Our conversion rates increased by 40% in the first month using this layout."</p>
+                    <div class="client-info">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="Client" />
+                        <div>
+                            <h4>Amit Patel</h4>
+                            <span>Digital Marketer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Stunning designs and clean code. My developers love working with WebNexus templates. It saves us weeks of work."</p>
+                    <div class="client-info">
+                        <img src="https://i.pravatar.cc/150?u=4" alt="Client" />
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>CTO, FinTech Solutions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Best customer support I've experienced. They helped me customize the dashboard perfectly for my SaaS product."</p>
+                    <div class="client-info">
+                        <img src="https://i.pravatar.cc/150?u=5" alt="Client" />
+                        <div>
+                            <h4>Michael Brown</h4>
+                            <span>SaaS Founder</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-              "The portfolio template I bought allowed me to launch my freelance career. Documentation was clear and customization was a breeze."
-            </p>
-            <div class="client-info">
-              <img src="https://i.pravatar.cc/50?u=2" alt="Client" />
-              <div>
-                <h4>Sneha Sharma</h4>
-                <span>UX Designer</span>
-              </div>
-            </div>
-          </div>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -339,8 +382,10 @@
             Your strategic partner for digital excellence. We build websites that drive growth.
           </p>
           <div class="social-links">
-            <a href="#">FB</a> <a href="#">TW</a> <a href="#">IG</a>
-            <a href="#">LN</a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="footer-links">
@@ -378,7 +423,7 @@
 
     <div class="nav-overlay"></div>
     <a href="https://wa.me/919887374746" class="whatsapp-float" target="_blank">
-      💬
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="script.js"></script>
