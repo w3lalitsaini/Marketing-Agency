@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Premium Web Templates & UI Kits - WebNexus</title>
+    <meta name="description" content="Download high-quality, conversion-optimized website templates, UI kits, and SaaS dashboards. Speed up your workflow with WebNexus assets.">
+    <meta property="og:title" content="WebNexus Store - Premium Digital Assets">
+    <meta property="og:description" content="Premium HTML templates and UI kits for developers and agencies.">
+    <meta property="og:image" content="https://yourdomain.com/store-og.jpg">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Markup for Products -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "SaaS Starter Kit",
+          "description": "Complete landing page and dashboard template for SaaS startups.",
+          "offers": {
+            "@type": "Offer",
+            "price": "49.00",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "Agency Portfolio V2",
+          "description": "minimalist portfolio template for creative agencies.",
+          "offers": {
+            "@type": "Offer",
+            "price": "39.00",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .store-hero {
+            padding: 150px 0 60px 0;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 25px;
+            border-radius: 30px;
+            color: var(--gray);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .product-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .product-img {
+            height: 200px;
+            background: #1e1e2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4b5563;
+            font-size: 3rem;
+        }
+        .product-content {
+            padding: 25px;
+        }
+        .product-tags {
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container-header">
+            <div class="logo">Web<span>Nexus</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="store.html" class="active">Store</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact" class="btn-nav">Let's Talk</a></li>
+            </ul>
+             <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="store-hero">
+        <div class="container">
+            <span class="badge">Digital Assets</span>
+            <h1 class="section-title">Premium <span class="gradient-text">Templates</span></h1>
+            <p style="max-width: 600px; margin: auto; color: var(--gray);">
+                Accelerate your workflow with our conversion-optimized templates and UI kits. Clean code, responsive design, and easy to customize.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Assets</button>
+                <button class="filter-btn" data-filter="saas">SaaS Kits</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolios</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="ui-kit">UI Kits</button>
+            </div>
+
+            <div class="card-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="saas">
+                    <div class="product-img">🚀</div>
+                    <div class="product-content">
+                        <span class="product-tags">SaaS Template</span>
+                        <h3>Startup Booster V1</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Modern landing page with pricing, testimonials, and feature grid.</p>
+                        <div class="product-price">$49</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Startup Booster V1" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="portfolio">
+                    <div class="product-img">🎨</div>
+                    <div class="product-content">
+                        <span class="product-tags">Portfolio</span>
+                        <h3>Creative Folio</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Minimalist dark-mode portfolio for designers and developers.</p>
+                        <div class="product-price">$39</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Creative Folio" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-img-card product-card" data-category="ecommerce">
+                    <div class="product-img">🛍️</div>
+                    <div class="product-content">
+                        <span class="product-tags">E-commerce</span>
+                        <h3>Shopify Starter</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">High-converting product page layout with cart functionality.</p>
+                        <div class="product-price">$59</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Shopify Starter" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="ui-kit">
+                    <div class="product-img">📱</div>
+                    <div class="product-content">
+                        <span class="product-tags">UI Kit</span>
+                        <h3>Mobile App UI</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">50+ screens for iOS and Android app design (Figma + HTML).</p>
+                        <div class="product-price">$29</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Mobile App UI" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+
+                 <!-- Product 5 -->
+                 <div class="product-card" data-category="saas">
+                    <div class="product-img">📊</div>
+                    <div class="product-content">
+                        <span class="product-tags">Dashboard</span>
+                        <h3>Admin Pro</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Clean admin dashboard template with charts and data tables.</p>
+                        <div class="product-price">$69</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Admin Pro" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+
+                 <!-- Product 6 -->
+                 <div class="product-card" data-category="blog">
+                    <div class="product-img">📰</div>
+                    <div class="product-content">
+                        <span class="product-tags">Blog</span>
+                        <h3>Tech Blog Theme</h3>
+                        <p style="color: var(--gray); font-size: 0.9rem;">SEO-optimized blog theme with newsletter integration.</p>
+                        <div class="product-price">$39</div>
+                        <a href="https://wa.me/919887374746?text=I'm interested in buying Tech Blog Theme" target="_blank" class="btn-outline" style="width: 100%; text-align: center;">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Need a Custom Solution?</h2>
+            <p style="margin-bottom: 30px; color: var(--gray);">
+                If these templates don't fit your needs, we can build something unique for you.
+            </p>
+            <a href="index.html#contact" class="btn-primary">Get a Custom Quote</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Web<span>Nexus</span></div>
+                <p>
+                    Your strategic partner for digital excellence. We build websites that drive growth.
+                </p>
+                <div class="social-links">
+                    <a href="#">FB</a> <a href="#">TW</a> <a href="#">IG</a> <a href="#">LN</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="store.html">Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="refund.html">Refund Policy</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get the latest web trends and template offers.</p>
+                <form class="news-form">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 WebNexus Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

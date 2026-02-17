@@ -51,17 +51,19 @@
         "sameAs": ["https://linkedin.com/in/yourprofile"]
       }
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <header class="main-header">
       <nav class="container-header">
         <div class="logo">Web<span>Nexus</span></div>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#templates">Store</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="store.html">Store</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact" class="btn-nav">Hire Me</a></li>
+          <li><a href="#contact" class="btn-nav">Let's Talk</a></li>
         </ul>
         <div class="menu-toggle" id="mobile-menu">
           <span></span>
@@ -74,22 +76,39 @@
     <section id="home" class="hero">
       <div class="container-hero hero-wrapper">
         <div class="hero-content">
-          <span class="badge">🔥 New Templates Available</span>
+          <span class="badge">🔥 Premium Web Solutions</span>
           <h1>
-            Transforming Ideas Into
-            <span class="gradient-text">Digital Reality</span>
+            Elevate Your Business With
+            <span class="gradient-text">Future-Ready Tech</span>
           </h1>
           <p>
-            Main ek Web Developer hoon jo aapke business ke liye high-converting
-            websites banata hai aur premium templates provide karta hoon.
+            We build high-converting websites and custom web applications that visually stun and perform flawslessly. Partner with WebNexus to transform your digital presence.
           </p>
           <div class="btn-group">
-            <a href="#templates" class="btn-primary">Browse Templates</a>
-            <a href="#contact" class="btn-secondary">Start a Project</a>
+            <a href="#contact" class="btn-primary">Start a Project</a>
+            <a href="store.html" class="btn-secondary">Browse Templates</a>
+          </div>
+          <div class="trusted-by" style="margin-top: 40px; opacity: 0.7;">
+            <small>TRUSTED BY 250+ BUSINESSES</small>
           </div>
         </div>
         <div class="hero-img-box">
-          <img src="laptop.jpg" loading="lazy" alt="Dashboard Preview" />
+          <img src="laptop.jpg" loading="lazy" alt="Web Development Dashboard" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section class="tech-stack" style="padding: 40px 0; background: #f8fafc; text-align: center;">
+      <div class="container">
+        <p style="color: var(--gray); font-weight: 600; margin-bottom: 20px;">POWERED BY MODERN TECH</p>
+        <div class="tech-logos" style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; opacity: 0.6; font-weight: 700; font-size: 1.5rem;">
+          <span>REACT</span>
+          <span>NEXT.JS</span>
+          <span>NODE.JS</span>
+          <span>SHOPIFY</span>
+          <span>TAILWIND</span>
+          <span>AWS</span>
         </div>
       </div>
     </section>
@@ -98,7 +117,7 @@
       <div class="container stats-grid">
         <div class="stat-item">
           <h2>250+</h2>
-          <p>Projects Done</p>
+          <p>Projects Delivered</p>
         </div>
         <div class="stat-item">
           <h2>50+</h2>
@@ -106,52 +125,61 @@
         </div>
         <div class="stat-item">
           <h2>99%</h2>
-          <p>Happy Clients</p>
+          <p>Client Retention</p>
         </div>
         <div class="stat-item">
           <h2>5+</h2>
-          <p>Years Exp.</p>
+          <p>Years Experience</p>
         </div>
       </div>
     </section>
 
     <section id="services" class="section">
       <div class="container text-center">
-        <h2 class="section-title">Exclusive Services</h2>
+        <h2 class="section-title">Our Expertise</h2>
+        <p style="max-width: 600px; margin: 0 auto 50px auto; color: var(--gray);">
+          We don't just write code; we solve business problems. 
+        </p>
         <div class="card-grid">
           <div class="glass-card">
             <span class="icon">🚀</span>
-            <h3>Custom Web Apps</h3>
+            <h3>Custom Development</h3>
             <p>
-              React, Next.js aur Node.js ke saath fast aur scalable
-              applications.
+              Scalable web applications built with React, Next.js, and Node.js for high performance.
             </p>
           </div>
           <div class="glass-card">
             <span class="icon">🎨</span>
             <h3>Premium UI/UX</h3>
             <p>
-              Modern design jo user experience aur conversions ko badhata hai.
+              User-centric designs that look stunning and drive higher conversion rates.
             </p>
           </div>
           <div class="glass-card">
             <span class="icon">🛒</span>
             <h3>E-Commerce</h3>
             <p>
-              Apna online store shuru karein secure payment gateways ke saath.
+              Secure, feature-rich online stores powered by Shopify or Custom MERN Stack.
             </p>
           </div>
+        </div>
+        <div style="margin-top: 40px;">
+            <a href="services.html" class="btn-outline" style="color: var(--primary); font-weight: 700;">View All Services &rarr;</a>
         </div>
       </div>
     </section>
 
     <section id="templates" class="section bg-light">
       <div class="container">
-        <h2 class="section-title">Premium Templates Marketplace</h2>
+        <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 50px;">
+            <h2 class="section-title" style="margin-bottom: 0; text-align: left;">Template Marketplace</h2>
+            <a href="store.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">View All &rarr;</a>
+        </div>
+        
         <div class="card-grid">
           <div class="product-card">
             <div class="image-container">
-              <img src="resume-builder.jpg" alt="Template Preview" />
+              <img src="resume-builder.jpg" alt="SaaS Template" />
               <div class="overlay">
                 <button onclick="preview('SaaS')" class="btn-preview">
                   Live Preview
@@ -165,20 +193,20 @@
               </div>
               <h4>Enterprise SaaS Landing Page</h4>
               <p>
-                Clean, minimal, and conversion-optimized for software companies.
+                Clean, minimal, and conversion-optimized structure for modern software companies.
               </p>
               <div class="p-features">
                 <span>⚡ Fast Load</span>
                 <span>📱 Responsive</span>
               </div>
               <button onclick="buyNow('Enterprise SaaS')" class="btn-buy-now">
-                Get Started
+                Buy Now
               </button>
             </div>
           </div>
           <div class="product-card">
             <div class="image-container">
-              <img src="portfolio2.jpg" alt="Template Preview" />
+              <img src="portfolio2.jpg" alt="Portfolio Template" />
               <div class="overlay">
                 <button onclick="preview('Portfolio')" class="btn-preview">
                   Live Preview
@@ -192,95 +220,15 @@
               </div>
               <h4>Creative Portfolio Pro</h4>
               <p>
-                Perfect for designers, photographers, and developers to showcase
-                work.
+                Showcase your work with style using this dark-mode enabled premium portfolio.
               </p>
               <div class="p-features">
                 <span>🎨 Dark Mode</span>
                 <span>✨ Animations</span>
               </div>
               <button onclick="buyNow('Portfolio Pro')" class="btn-buy-now">
-                Get Started
+                Buy Now
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="section">
-      <div class="container">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-              "WebNexus ne hamari business website ko sirf 1 hafte mein live kar
-              diya. Performance kamaal ki hai!"
-            </p>
-            <div class="client-info">
-              <img src="https://i.pravatar.cc/50?u=1" alt="Client" />
-              <div>
-                <h4>Rajesh Kumar</h4>
-                <span>Founder, Tech-Start</span>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p>
-              "Maine inka Portfolio template kharida, code bohot clean hai aur
-              customize karna bohot aasaan tha."
-            </p>
-            <div class="client-info">
-              <img src="https://i.pravatar.cc/50?u=2" alt="Client" />
-              <div>
-                <h4>Sneha Sharma</h4>
-                <span>Freelance Designer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section bg-light">
-      <div class="container faq-container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header">
-              Custom website banne mein kitna waqt lagta hai?
-              <span class="icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>
-                Ek standard website banne mein lagbhag 7 se 15 din ka waqt lagta
-                hai, depend karta hai aapki requirements par.
-              </p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">
-              Kya templates kharidne ke baad support milega?
-              <span class="icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>
-                Ji haan, har template ke saath aapko 6 mahine ka free technical
-                support aur updates milte hain.
-              </p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-header">
-              Payment methods kya kya hain? <span class="icon">+</span>
-            </button>
-            <div class="accordion-body">
-              <p>
-                Hum UPI, Net Banking, Credit/Debit cards aur PayPal
-                (international clients ke liye) accept karte hain.
-              </p>
             </div>
           </div>
         </div>
@@ -289,29 +237,78 @@
 
     <section id="pricing" class="section">
       <div class="container">
-        <h2 class="section-title text-center">Flexible Pricing</h2>
+        <h2 class="section-title text-center">Transparent Pricing</h2>
         <div class="pricing-grid">
           <div class="price-card">
-            <h3>Basic</h3>
+            <h3>Starter</h3>
             <div class="price">₹9,999</div>
+            <p style="color: var(--gray); margin-bottom: 20px;">Perfect for small businesses.</p>
             <ul>
               <li>5 Pages Website</li>
               <li>Mobile Responsive</li>
-              <li>Basic SEO</li>
+              <li>Basic SEO Setup</li>
               <li>1 Month Support</li>
             </ul>
             <a href="#contact" class="btn-outline">Choose Plan</a>
           </div>
           <div class="price-card featured">
-            <h3>Premium</h3>
+            <span class="badge" style="margin-bottom: 10px; display: inline-block;">RECOMMENDED</span>
+            <h3>Growth</h3>
             <div class="price">₹24,999</div>
+            <p style="color: var(--gray); margin-bottom: 20px;">For serious brands.</p>
             <ul>
               <li>Unlimited Pages</li>
-              <li>E-commerce Ready</li>
-              <li>Advanced SEO</li>
+              <li>CMS / Admin Panel</li>
+              <li>Advanced SEO & Speed</li>
               <li>6 Month Support</li>
             </ul>
-            <a href="#contact" class="btn-primary">Most Popular</a>
+            <a href="#contact" class="btn-primary">Choose Plan</a>
+          </div>
+           <div class="price-card">
+            <h3>Custom</h3>
+            <div class="price">Let's Talk</div>
+             <p style="color: var(--gray); margin-bottom: 20px;">Complex web applications.</p>
+            <ul>
+              <li>React / Next.js App</li>
+              <li>Custom Database</li>
+              <li>API Integration</li>
+              <li>Priority Support</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Client Success Stories</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>
+              "WebNexus delivered our corporate site in just one week. The quality of code and attention to design detail is outstanding. Highly recommended!"
+            </p>
+            <div class="client-info">
+              <img src="https://i.pravatar.cc/50?u=1" alt="Client" />
+              <div>
+                <h4>Rajesh Kumar</h4>
+                <span>CEO, TechStart Inc.</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>
+              "The portfolio template I bought allowed me to launch my freelance career. Documentation was clear and customization was a breeze."
+            </p>
+            <div class="client-info">
+              <img src="https://i.pravatar.cc/50?u=2" alt="Client" />
+              <div>
+                <h4>Sneha Sharma</h4>
+                <span>UX Designer</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -320,14 +317,15 @@
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="contact-card">
-          <h2>Ready to grow? 📈</h2>
+          <h2>Ready to Scale Your Business? �</h2>
+          <p style="margin-bottom: 30px; opacity: 0.9;">Drop us a message and we'll get back to you within 24 hours.</p>
           <form id="contactForm">
             <div class="input-row">
-              <input type="text" placeholder="Name" required />
-              <input type="email" placeholder="Email" required />
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Email Address" required />
             </div>
-            <textarea rows="5" placeholder="Project details..."></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
+            <textarea name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+            <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
           </form>
         </div>
       </div>
@@ -338,8 +336,7 @@
         <div class="footer-brand">
           <div class="logo">Web<span>Nexus</span></div>
           <p>
-            High-end web solutions aur premium templates ke liye aapka
-            bharosemand partner.
+            Your strategic partner for digital excellence. We build websites that drive growth.
           </p>
           <div class="social-links">
             <a href="#">FB</a> <a href="#">TW</a> <a href="#">IG</a>
@@ -347,26 +344,25 @@
           </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4>Explore</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="#templates">Store</a></li>
-            <li><a href="#pricing">Pricing</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Support</h4>
           <ul>
-            <li><a href="#faq">FAQs</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Refund Policy</a></li>
           </ul>
         </div>
         <div class="footer-newsletter">
-          <h4>Newsletter</h4>
-          <p>Naye templates ki update ke liye subscribe karein.</p>
+          <h4>Stay Updated</h4>
+          <p>Get the latest web trends and template offers.</p>
           <form class="news-form">
             <input type="email" placeholder="Email Address" />
             <button type="submit">Join</button>
@@ -375,13 +371,13 @@
       </div>
       <div class="footer-bottom">
         <p>
-          &copy; 2026 WebNexus Agency. Crafted with ❤️ for Digital Excellence.
+          &copy; 2026 WebNexus Agency. All rights reserved.
         </p>
       </div>
     </footer>
 
     <div class="nav-overlay"></div>
-    <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919887374746" class="whatsapp-float" target="_blank">
       💬
     </a>
 
